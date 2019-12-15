@@ -10,7 +10,7 @@ chrome.runtime.onMessage.addListener(function(msg, sender, sendResponse) {
     if (msg.type === 'savePost') {
         const { url, caption } = msg;
         const encodedLink = encodeURIComponent(url);
-        const laterLink = `https://app.later.com/2QQB6/import?url=${encodedLink}`;
+        const laterLink = `https://app.later.com/2QQB6/collect/import?url=${encodedLink}`;
         chrome.tabs.create({ url: laterLink, active: false }, function(tab) {
             tabsToCaption[tab.id] = caption;
         });

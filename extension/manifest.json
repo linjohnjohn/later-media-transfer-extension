@@ -33,7 +33,7 @@
   },
   "content_scripts": [
     {
-      "matches": ["https://app.later.com/2QQB6/import?url=*"],
+      "matches": ["https://app.later.com/2QQB6/collect/import?url=*"],
       "js": ["content/transferMedia.js"]
     },
     {
