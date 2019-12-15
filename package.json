@@ -1,0 +1,36 @@
+{
+  "name": "instagram",
+  "version": "1.0.0",
+  "description": "",
+  "main": "htag_scrape.js",
+  "scripts": {
+    "hashtag": "node -r esm hashtag_scraper\\htag_scrape.js",
+    "puppycontent": "node -r esm content_scraper\\content_scraper.js puppies.txt 168",
+    "calicontent": "node -r esm content_scraper\\content_scraper.js calisthenics.txt 720",
+    "contentloop": "node -r esm content_scraper\\loop.js",
+    "playground": "node -r esm playground\\test.js",
+    "calitrendcontent": "node -r esm trend_content_scraper\\scraper.js calisthenics.txt",
+    "trendloop": "node -r esm trend_content_scraper\\loop.js",
+    "dedupCSV": "node -r esm playground\\dedupFile.js",
+    "laterLinks": "node -r esm later\\laterLinks.js",
+    "facebook": "node -r esm facebook\\generateLinks.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "cheerio": "^1.0.0-rc.3",
+    "esm": "^3.2.25",
+    "shelljs": "^0.8.3",
+    "xlsx": "^0.14.4"
+  },
+  "devDependencies": {
+    "eslint": "^6.1.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-standard": "^13.0.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.0"
+  }
+}

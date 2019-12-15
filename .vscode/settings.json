@@ -1,0 +1,5 @@
+{
+  "vetur.format.options.tabSize": 4,
+  "eslint.provideLintTask": true,
+  "window.zoomLevel": -0.2
+}

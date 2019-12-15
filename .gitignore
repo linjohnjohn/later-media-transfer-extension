@@ -1,0 +1,9 @@
+node_modules
+content_scraper/*.csv
+trend_content_scraper/*.csv
+playground/*.csv
+facebook/*.csv
+later/*.csv
+hashtag_scraper/*.csv
+
+*.ahk
