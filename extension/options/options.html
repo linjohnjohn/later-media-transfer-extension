@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Later Media Transfer Extension</title>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <h1>Later Media Transfer</h1>
+        </div>
+
+        <div class="container mt-5">
+            <div class="row justify-content-center">
+                <h3>Caption Text</h3>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-6">
+                    <div class="form-group">
+                        <label for="caption-template-input">Edit Caption Template</label>
+                        <label for="caption-template-input">Write your caption template and put use
+                            <code>{{customized}}</code> to
+                            indicate where you want the customized part of your caption to be inserted, use
+                            <code>{{credit}}</code>
+                            to indicate where you want the original content creator you want to be inserted and use
+                            <code>{{hashtags}}</code> to indicate where you want your hashtags to be inserted!</label>
+                        <select id="template-selector">
+                        </select>
+
+                        <a href="#" id="toggle-add-template-section">+ Add Template Label</a>
+                        <a href="#" id="delete-template">+ Delete Template Label</a>
+
+                        <div id="add-template-section">
+                            <input type="text" id="add-template-input" name="newTemplate" class="form-control"
+                            s-model="newTemplate" placeholder="template1"></input>
+                            <button id="add-template-button" class="btn btn-primary full-button">Add New Template</button>
+                        </div>
+
+                        <textarea id="caption-template-input" name="newCaptionTemplate" class="form-control" rows="10"
+                            s-model="newCaptionTemplate"></textarea>
+                    </div>
+                    <button id="save-caption-template-button" class="btn btn-primary full-button">Save</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt-5">
+            <div class="row justify-content-center">
+                <h3>Hashtag Groups</h3>
+            </div>
+
+            <div class="row justify-content-center mt-3 mb-5">
+                <div class="col-6">
+                    <button id="view-all-hashtag-groups-button" class="btn btn-outline-primary full-button"
+                        data-toggle="modal" data-target="#view-all-hashtag-groups-modal">View All
+                        Groups</button>
+                    <div class="modal fade" id="view-all-hashtag-groups-modal" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">All Hashtag Groups</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div id="view-all-hashtag-groups-modal-body" class="modal-body container">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="d-flex justify-content-between">
+                                                <span class="h5">title</span>
+                                                <i data-feather="trash-2" class="align-self-end icon-h5 icon-red"></i>
+                                            </div>
+
+                                            <p>titletitletitletitletitletitletitletitletitletitletitletitle
+                                                titletitletitletitles</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-6">
+                    <div class="form-group">
+                        <label for="new-hashtag-group-name">Group Name</label>
+                        <input id="new-hashtag-group-name" name="newHashtagGroupName" class="form-control" type="text"
+                            placeholder="Name" s-model="newHashtagGroupName">
+                        <small id="new-hashtag-group-name-error" class="form-text text-primary">Group Name Already
+                            Exists</small>
+
+                    </div>
+                    <div class="form-group">
+                        <label for="new-hashtag-group-body">Hashtags</label>
+                        <textarea id="new-hashtag-group-body" name="newHashtagGroupBody" cols="30" rows="2"
+                            placeholder="#happy #love #fitness #sports #turtles #puppies #dogs..." class="form-control"
+                            s-model="newHashtagGroupBody"></textarea>
+                    </div>
+                    <button id="add-new-hashtag-group-button" class="btn btn-primary full-button">Add Group</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../bootstrap/js/jquery.min.js"></script>
+    <script src="../bootstrap/js/feather.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <script src="seer.js"></script>
+    <script src="options.js"></script>
+</body>
+
+<style>
+    .full-textarea,
+    .full-input {
+        width: 100%;
+    }
+
+    .full-button {
+        width: 100%;
+    }
+
+    .icon-red {
+        color: var(--red);
+        transition: all .15s ease-in-out;
+        border-radius: .25rem;
+    }
+
+    .icon-red:hover {
+        color: #fff;
+        background-color: var(--red);
+    }
+
+    .icon-h5 {
+        width: 1.25rem;
+        height: 1.25rem;
+    }
+
+    .checkbox-container {
+        columns: 150px 3;
+    }
+
+    .checkbox-container>div {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+</style>
+
+</html>

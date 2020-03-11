@@ -2,12 +2,12 @@
   "name": "Instagram/Later Media Assistance",
   "version": "1.0",
   "description": "Transfer reposted content from Instagram to Later Media Collection with ease",
-  "devtools_page": "devtools/devtools.html",
   "permissions": ["activeTab", "commands", "declarativeContent", "storage", "webRequest", "<all_urls>"],
   "background": {
     "page": "background/background.html",
     "persistent": true
   },
+  "options_page": "options/options.html",
   "page_action": {
     "default_popup": "popup/popup.html",
     "default_icon": {
